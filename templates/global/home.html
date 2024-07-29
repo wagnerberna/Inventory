@@ -1,0 +1,165 @@
+{% extends 'global/base.html' %}
+{% block head_title %}Sistemas TI{% endblock head_title %}
+{% block header_title %}Sistemas TI{% endblock header_title %}
+{% block main %}
+
+{%if support_check%}
+    {% include "global/menu.html" %}
+{%endif%}
+
+    <div class="container-main-division">
+        <div class="container-child-division">
+            <div class="container">
+                <h2>HelpDesk</h2>
+                
+                <h3>
+                    <a href="{%url "new_demand"%}">
+                        <i class="fa-sharp fa-solid fa-circle-check main-logo-icon"></i>
+                        Abrir Chamado
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "demands_list_by_user"%}">
+                        <i class="fa-sharp fa-solid fa-list-check main-logo-icon"></i>
+                        Meus Chamados Abertos
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "demand_list_done"%}">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass main-logo-icon"></i>
+                        Pesquisar Chamados Concluídos
+                    </a>
+                </h3>
+            </div>
+            {%if support_check%}
+                
+                <div class="container">
+                    <h2>Supporte</h2>
+                    <h3>
+                        <a href="{%url "support_list_all"%}">
+                            <i class="fa-sharp fa-solid fa-list main-logo-icon"></i>
+                            Fila de Chamados
+                        </a>
+                    </h3>
+                    <h3>
+                        <a href="{%url "support_by_technical"%}">
+                            <i class="fa-sharp fa-solid fa-user-secret main-logo-icon"></i>
+                            Meus Chamados
+                        </a>
+                    </h3>
+                    <h3>
+                        <a href="{%url "support_list_done"%}">
+                            <i class="fa-sharp fa-solid fa-check-double main-logo-icon"></i>
+                            Chamados Concluídos
+                        </a>
+                    </h3>
+                </div>
+        
+                <div class="container">
+                    <h2>Kanban</h2>
+                    <h3>
+                        <a href="{%url "kanban_projects"%}">
+                            <i class="fa-solid fa-table-columns main-logo-icon"></i>
+                            Quadro Kanban
+                        </a>
+                    </h3>
+                    <h3>
+                        <a href="{%url "kanban_manager"%}">
+                            <i class="fa-solid fa-gear main-logo-icon"></i>
+                            Gerenciamento
+                        </a>
+                    </h3>
+                </div>
+        </div>
+
+        <div class="container-child-division">
+            <div class="container">
+                <h2>Relatórios e Gráficos</h2>
+                <h3>
+                    <a href="{%url "dashboard"%}">
+                        <i class="fa-solid fa-square-poll-vertical main-logo-icon"></i>
+                        Dashboard Geral
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "report_per_project"%}">
+                        <i class="fa-brands fa-product-hunt main-logo-icon"></i>
+                        Projetos
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "report_per_technical"%}">
+                        <i class="<fa-sharp fa-solid fa-users main-logo-icon"></i>
+                        Atividades por Técnico
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "ranking"%}">
+                        <i class="fa-solid fa-ranking-star main-logo-icon"></i>
+                        Ranking Workstations
+                    </a>
+                </h3>
+                
+            </div>
+
+            <div class="container">
+                <h2>TI - Inventário</h2>
+                
+                <h3>
+                    <a href="{%url "dashboard_ocs"%}">
+                        <i class="fa-solid fa-square-poll-vertical main-logo-icon"></i>
+                        Dashboard OCS
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "inventory_server"%}">
+                        <i class="fa-solid fa-robot main-logo-icon"></i>
+                        Servidores
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "inventory_switch"%}">
+                        <i class="fa-sharp fa-solid fa-network-wired main-logo-icon"></i>
+                        Switches
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "inventory_workstation"%}">
+                        <i class="fa-solid fa-computer main-logo-icon"></i>
+                        Tabela Workstations
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "workstations_update"%}">
+                        <i class="fa-sharp fa-solid fa-file-import main-logo-icon"></i>
+                        Atualizar Tabela Workstations
+                    </a>
+                </h3>
+            </div>
+            
+            
+
+            <div class="container">
+                <h2>TI - Topologia e Documentação</h2>
+                <h3>
+                    <a href="{%url "topology"%}">
+                        <i class="fa-sharp fa-solid fa-network-wired main-logo-icon"></i>
+                        Topologia de Rede e Servidores
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{%url "network_racks"%}">
+                        <i class="fa-solid fa-camera main-logo-icon"></i>
+                        Fotos Racks de Rede
+                    </a>
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+    {% endif %}
+    
+{% endblock main %}
+

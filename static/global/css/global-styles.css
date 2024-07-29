@@ -1,0 +1,523 @@
+:root {
+    --color-primary: #1E477F;
+    --color-primary-hover: #2086c2;
+    --color-primary-dark: #13141f;
+    --color-primary-dark-hover: #212336;
+    --color-primary-light: #d4ecfa;
+    --color-primary-light-hover: #bdd8e7;
+
+    --color-white: #ffffff;
+    --color-black: #0B0A24;
+
+    --color-merco-azul: #1F1D41;
+    --color-form-django: #E9ECEF;
+    --color-border-form-django: #CED4DA;
+    --color-kanban-green: #7fe686;
+    --color-kanban-yellow: #ffe97f;
+    --color-kanban-blue: #86cbf9;
+    --color-kanban-red: #fe7167;
+
+    /* cores mercosul */
+    --color-a1: #E8E7F0;
+    --color-a2: #1E477F;
+    --color-a3: #1F1D42;
+    --color-a4: #234069;
+    --color-a5: #0B0A24;
+    --color-a6: #FFFFFF;
+
+    /* fontes mercosul */
+    --font-01: "Bree Serif";
+    --font-02: "Merriweather";
+    --font-03: "Roboto";
+
+
+    --font-primary: sans-serif;
+    --font-headings: "Roboto Slab", serif;
+
+    --spacing-gutter-small: 1rem;
+    --spacing-gutter-medium: 3rem;
+    --spacing-gutter-large: 4rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-a5);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-primary);
+    color: var(--color-a3);
+    margin: 25px 10px 20px 10px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+
+table,
+thead,
+th,
+tr,
+td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+body {
+    font-size: 1.6rem;
+    /* font-family: var(--font-primary); */
+    background-color: var(--color-a1);
+}
+
+.title-margin-min {
+    margin: 5px 5px 5px 5px;
+}
+
+.title-center {
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 10px 10px 10px;
+}
+
+.title-kanban {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+.table-default {
+    border: 4px solid black;
+    padding: 15px;
+}
+
+.join-small-tables {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.container {
+    max-width: 144rem;
+    margin: 30px auto;
+    padding: var(--spacing-gutter-small);
+    background-color: var(--color-a6);
+}
+
+.tasks {
+    text-align: center;
+}
+
+.workstations {
+    text-align: center;
+}
+
+.small-container {
+    max-width: 70rem;
+    margin: var(--spacing-gutter-small);
+}
+
+header {
+    background-color: var(--color-a6);
+    width: 100%;
+    border-bottom: solid 2px var(--color-a2);
+}
+
+.main-header-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: var(--color-a6);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-container {
+    margin-bottom: 2rem;
+}
+
+.main-logo {
+    font-size: 1.5rem;
+    color: var(--color-a2);
+    text-decoration: none;
+}
+
+.main-logo-client {
+    color: var(--color-white);
+    text-decoration: none;
+    width: 270px;
+    position: relative;
+}
+
+
+.main-logo-icon {
+    margin-right: 1rem;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.main-logo-icon-right {
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+.main-logo-left {
+    color: var(--color-a2);
+    text-decoration: none;
+    text-align: left;
+}
+
+.main-logo-right {
+    color: var(--color-white);
+    text-decoration: none;
+    text-align: right;
+}
+
+.main-logo-center {
+    color: var(--color-white);
+    text-decoration: none;
+    text-align: center;
+}
+
+.main-footer {
+    background: var(--color-a2);
+    color: var(--color-white);
+    bottom: 0;
+    position: fixed;
+    text-align: right;
+    width: 100%;
+}
+
+.main-logo-footer {
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.main-logo-footer-link {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.cel-active {
+    color: var(--color-success-dark)
+}
+
+.span_blue {
+    font-family: var(--font-primary);
+    color: var(--color-info-graphic)
+}
+
+.container-gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-row-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.container-main-division {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 140px;
+}
+
+.container-child-division {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    margin-right: 20px;
+    width: 500px;
+}
+
+
+.container-kanban-division {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.containers-kanban-child {
+    display: flex;
+    flex-direction: row;
+}
+
+.containers-kanban-card {
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.containers-kanban-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.button-invisible {
+    background-color: var(--color-gray-1);
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+
+.img-gallery {
+    margin: var(--spacing-gutter-small);
+    width: 100%;
+    max-width: 380px;
+}
+
+.img-graphic {
+    max-width: 101%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sla-report {
+    margin-left: 235px;
+}
+
+.container-box {
+    border-width: 1px;
+    border-color: var(--color-border-form-django);
+    border-style: solid;
+    border-radius: 10px;
+    background: var(--color-form-django);
+    text-align: left;
+}
+
+.order-list {
+    margin: var(--spacing-gutter-small);
+}
+
+.activity-technician {
+    margin: 50px 10px;
+}
+
+.table-kanban-to-do {
+    width: 200px;
+    font-size: 15px;
+    background-color: var(--color-kanban-green);
+}
+
+.table-kanban-doing {
+    width: 200px;
+    font-size: 15px;
+    background-color: var(--color-kanban-yellow);
+}
+
+.table-kanban-blocked {
+    width: 200px;
+    font-size: 15px;
+    background-color: var(--color-kanban-red);
+}
+
+.table-kanban-done {
+    width: 200px;
+    font-size: 15px;
+    background-color: var(--color-kanban-blue);
+}
+
+.table-th-kanban {
+    height: 30px;
+}
+
+.table-td-kanban-small {
+    height: 20px;
+}
+
+.table-td-kanban {
+    height: 100px;
+}
+
+.icon-kanban {
+    margin-left: 2px;
+    font-size: 20px;
+    color: var(--color-black);
+}
+
+.link-black {
+    color: var(--color-black);
+}
+
+.li-historic {
+    margin-bottom: var(--spacing-gutter-small);
+    font-weight: bold;
+}
+
+.span-historic {
+    font-weight: normal;
+}
+
+/* Menu */
+.menu-container {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: var(--color-a2);
+    z-index: 2;
+    transition: all 300ms ease-in-out;
+}
+
+.menu-container a {
+    color: var(--color-white);
+}
+
+.menu-hidden {
+    left: -255px;
+}
+
+.button-show-menu {
+    position: fixed;
+    left: 265px;
+    top: 85px;
+    color: var(--color-white);
+    background-color: var(--color-a2);
+    border: none;
+    font-size: 20px;
+    z-index: 3;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.button-show-menu-visible {
+    visibility: visible;
+    opacity: 1;
+    left: 5px;
+}
+
+.button-close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--color-white);
+    background: none;
+    border: none;
+    font-size: 20px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 20px;
+}
+
+.menu-nav a {
+    width: 100%;
+    padding: 10px;
+}
+/* Fim Menu */
+
+/* Dashboard */
+.canvas-bar-small {
+    min-height: 250px;
+    min-width: 250px;
+    background-color: var(--color-a6);
+}
+
+.canvas-bar-big {
+    min-width: 500px;
+    max-width: 1000px;
+    min-height: 400px;
+    max-height: 600px;
+    background-color: var(--color-a6);
+}
+
+.canvas-pie-small {
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 350px;
+    background-color: var(--color-a6);
+}
+
+.canvas-pie-big {
+    min-width: 250px;
+    min-height: 250px;
+    background-color: var(--color-a6);
+}
+
+.container-dashboard-small {
+    background-color: var(--color-a1);
+    margin: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-dashboard-big {
+    background-color: var(--color-a1);
+    margin: 10px 10px 0px 10px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-dashboard-down-big {
+    background-color: var(--color-a1);
+    height: 900px;
+}
+
+.container-dashboard-activities {
+    background-color: var(--color-primary-hover);
+    border-radius: 10px;
+    width: 230px;
+    height: 120px;
+}
+
+.container-dashboard-ranking {
+    background-color: var(--color-primary-hover);
+    border-radius: 10px;
+    width: 250px;
+    height: 280px;
+}
+/* Fim Dashboard */
